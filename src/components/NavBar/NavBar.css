@@ -1,0 +1,13 @@
+.nav.nav-pills {
+  background-color: white;
+  position: absolute;
+  top: 80%;
+  right: 5%;
+  z-index: 3;
+  border-radius: 25px;
+}
+
+.nav.nav-pills>li.active>a {
+  border-radius: 25px;
+  background-color: #17a74d;
+}

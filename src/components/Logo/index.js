@@ -1,0 +1,13 @@
+import React from 'react';
+import logo from './dot.jpg';
+import './Logo.css';
+
+class Logo extends React.Component {
+  render() {
+    return (
+      <a href="http://www.nyc.gov/html/dot/html/home/home.shtml" target="_blank"><img src={logo} alt="Dot Main Logo" id="dot-logo"/></a>
+    );
+  }
+}
+
+export default Logo;
