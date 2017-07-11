@@ -15,7 +15,7 @@ class Map extends Component {
       },
       text: "55 Water st",
       title: "New York!",
-      markers: []
+      signs: []
     }
   }
 
@@ -37,7 +37,8 @@ class Map extends Component {
     this.map = new window.google.maps.Map(this.refs.map, {
       center: this.state.center,
       zoom: 16,
-      styles: MapStyles()
+      styles: MapStyles(),
+      streetViewControl: true
     });
     const contentString = this.state.text;
     const infoWindow = new window.google.maps.InfoWindow({content: contentString});
@@ -55,11 +56,15 @@ class Map extends Component {
     console.log(center)
   }
 
+  handleSignsResults = (response) => {
+    this.setState({signs: response})
+  }
+
   render() {
     return (
       <div>
         <Logo/>
-        <SearchBox MapUpdate={this.handleMapUpdate}/>
+        <SearchBox MapUpdate={this.handleMapUpdate} GetSigns={this.handleSignsResults}/>
         <NavBar/>
         <div ref="map" id="maps">Map is Loading</div>
       </div>
