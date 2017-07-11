@@ -66,7 +66,7 @@ class Map extends Component {
         <Logo/>
         <SearchBox MapUpdate={this.handleMapUpdate} GetSigns={this.handleSignsResults}/>
         <NavBar/>
-        <div ref="map" id="maps">Map is Loading</div>
+        <div ref="map" id="maps">Map is Loading!!</div>
       </div>
     );
   }
