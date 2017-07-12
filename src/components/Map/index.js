@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import NavBar from '../NavBar';
-import Logo from '../Logo';
 import SearchBox from '../SearchBox';
 import MapStyles from './MapStyles';
 import './App.css';
@@ -63,7 +62,6 @@ class Map extends Component {
   render() {
     return (
       <div>
-        <Logo/>
         <SearchBox MapUpdate={this.handleMapUpdate} GetSigns={this.handleSignsResults}/>
         <NavBar/>
         <div ref="map" id="maps">Map is Loading!!</div>
